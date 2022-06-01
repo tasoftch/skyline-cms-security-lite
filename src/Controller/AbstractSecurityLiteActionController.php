@@ -90,6 +90,8 @@ abstract class AbstractSecurityLiteActionController extends AbstractActionContro
 		$this->access_response = $this->get("response");
 
 		$this->user_provider = $this->prepareUserProvider();
+		$this->mode = $this->getDefaultAuthenticationMode();
+
 		parent::performAction($actionDescription, $renderInfo);
 	}
 
