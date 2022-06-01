@@ -102,6 +102,11 @@ abstract class AbstractSecurityLiteActionController extends AbstractActionContro
 	/**
 	 * @return int
 	 */
+	abstract protected function getDefaultAuthenticationMode(): int;
+
+	/**
+	 * @return int
+	 */
 	public function getMode(): int
 	{
 		return $this->mode;
